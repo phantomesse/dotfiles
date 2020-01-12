@@ -69,3 +69,8 @@ To improve the terminal experience, install the following:
 * [vim-plug](https://github.com/junegunn/vim-plug) - plugin manager for vim
   * Install plugins by opening `vim` and running `:PlugInstall`
 
+Aliases such as the `ls` alias that uses `lolcat` and `colorls` are stored in `~/bin`.
+Make sure that they are executable by doing:
+```
+chmod a+x ~/bin/ls
+```
