@@ -21,9 +21,9 @@ Stow as a brew package: `brew install stow`
 Clone this repository into `~/.dotfiles`:
 `git clone git@github.com:phantomesse/dotfiles.git ~/.dotfiles`
 
-# Step 2: Install config files
+# Step 3: Install config files
 
-### Both MacOS and Linux
+## Both MacOS and Linux
 Be in the `.dotfiles` directory. `stow` puts everything in the `~` directory.
 
-`stow vim`
+`stow shared`
