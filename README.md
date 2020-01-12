@@ -16,3 +16,9 @@ Stow as a brew package: `brew install stow`
 
 `sudo apt-get install stow`
 
+# Step 2: Install config files
+
+### Both MacOS and Linux
+Be in the `.dotfiles` directory. `stow` puts everything in the `~` directory.
+
+`stow vim`
