@@ -16,6 +16,11 @@ Stow as a brew package: `brew install stow`
 
 `sudo apt-get install stow`
 
+## Step 2: Clone this GitHub repo
+
+Clone this repository into `~/.dotfiles`:
+`git clone git@github.com:phantomesse/dotfiles.git ~/.dotfiles`
+
 # Step 2: Install config files
 
 ### Both MacOS and Linux
