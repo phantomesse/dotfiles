@@ -1,0 +1,4 @@
+#!/bin/bash
+
+colorls $@ --group-directories-first --git-status | lolcat
+
