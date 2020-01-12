@@ -1,0 +1,167 @@
+# Set the mod key to alt.
+set $mod Mod4
+
+set $wallpaper ~/wallpaper.png
+exec_always feh --bg-fill ~/wallpaper.png
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:System San Francisco Display Regular 13
+
+# Use Mouse+$mod to drag floating windows to their wanted position.
+floating_modifier $mod
+
+# Kill focused window.
+bindsym $mod+q kill
+
+# Shift window focus.
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move window.
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Resize window (you can also use the mouse for that).
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
+        # Back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# Focus the parent container.
+bindsym $mod+a focus parent
+
+# Split in horizontal orientation.
+bindsym $mod+h split h
+
+# Split in vertical orientation.
+bindsym $mod+v split v
+
+# Enter fullscreen mode for the focused container.
+#bindsym $mod+f fullscreen toggle
+# Need to install jq to get this to work: sudo apt-get install jq
+bindsym $mod+f exec bash ~/bin/fullscreen-chrome.sh
+
+# Change container layout (stacked, tabbed, toggle split).
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Toggle tiling / floating window.
+bindsym $mod+Shift+space floating toggle
+
+# Switch to workspace.
+bindsym $mod+1 workspace 1:One.
+bindsym $mod+2 workspace 2:Two.
+bindsym $mod+3 workspace 3:Three.
+bindsym $mod+4 workspace 4:Four.
+bindsym $mod+5 workspace 5:Five.
+bindsym $mod+6 workspace 6:Six.
+bindsym $mod+7 workspace 7:Seven.
+bindsym $mod+8 workspace 8:Eight.
+bindsym $mod+9 workspace 9:Nine.
+bindsym $mod+0 workspace 10:Ten.
+
+# Move focused container to workspace.
+bindsym $mod+Shift+1 move container to workspace 1:One.
+bindsym $mod+Shift+2 move container to workspace 2:Two.
+bindsym $mod+Shift+3 move container to workspace 3:Three.
+bindsym $mod+Shift+4 move container to workspace 4:Four.
+bindsym $mod+Shift+5 move container to workspace 5:Five.
+bindsym $mod+Shift+6 move container to workspace 6:Six.
+bindsym $mod+Shift+7 move container to workspace 7:Seven.
+bindsym $mod+Shift+8 move container to workspace 8:Eight.
+bindsym $mod+Shift+9 move container to workspace 9:Nine.
+bindsym $mod+Shift+0 move container to workspace 10:Ten.
+
+# No mouse focus.
+focus_follows_mouse no
+
+# Reload the configuration file.
+bindsym $mod+Shift+c reload
+
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3).
+bindsym $mod+Shift+r restart
+
+# Exit i3 (logs you out of your X session).
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# Set wallpaper.
+exec_always feh --bg-fill $wallpaper
+
+# Set colors.
+set_from_resource $fg        i3wm.color15 #fff
+set_from_resource $bg        i3wm.color0  #111
+set_from_resource $accent    i3wm.color8  #222
+
+# class                 border   backgr.  text  indicator  child_border
+client.focused          $accent  $accent  $fg   $fg        $accent
+client.focused_inactive $accent  $accent  $fg   $fg        $accent
+client.unfocused        $bg      $bg      $fg   $bg        $bg
+client.urgent           $bg      $bg      $fg   $bg        $bg
+client.placeholder      $bg      $bg      $fg   $bg        $bg
+
+# Add gaps.
+for_window [class=".*"] border pixel 3
+for_window [class=".*"] title_format "<span size='smaller'> %title</span>"
+gaps inner 20
+
+# Start dmenu.
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# Start a terminal.
+bindsym $mod+Return exec kitty
+
+# Always have numlock on.
+exec_always --no-startup-id numlockx on
+
+# Volume controls.
+bindsym $mod+equal exec amixer set Master 5%+ # increase sound volume
+bindsym $mod+minus exec amixer set Master 5%- # decrease sound volume
+bindsym $mod+Shift+minus exec amixer -D pulse set Master 1+ toggle # mute / unmute sound
+
+# Media player controls.
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Brightness controls.
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# Polybar
+exec_always --no-startup-id ~/.config/i3/polybar.sh &
+
+for_window [class="^.*"] border pixel 0
+gaps inner 20
+
+# Redshift
+exec --no-startup-id redshift
+
+# Lock screen.
+bindsym $mod+Shift+l exec "~/.config/i3/lock.sh"
+
+# Terminal transparency.
+exec_always --no-startup-id compton
+
+# Update the xmodmap to switch the alt and windows keys.
+exec --no-startup-id xmodmap ~/.Xmodmaprc
+
+# Notifications
+exec_always --no-startup-id dunst -lb "$bg" -lf "$fg" -cb "$bg" -cf "$fg" -nb "$bg" -nf "$fg"
+

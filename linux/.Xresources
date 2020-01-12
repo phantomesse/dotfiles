@@ -1,0 +1,42 @@
+Xft.dpi: 128
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgba
+Xcursor.size: 16
+
+#define black         #011627
+#define red           #ef5350
+#define green         #22da6e
+#define yellow        #addb67
+#define blue          #82aaff
+#define magenta       #c792ea
+#define cyan          #21c7a8
+#define white         #d6deeb
+#define brightblack   #273a49
+#define brightred     #ef5350
+#define brightgreen   #22da6e
+#define brightyellow  #addb67
+#define brightblue    #82aaff
+#define brightmagenta #21c7a8
+#define brightcyan    #21c7a8
+#define brightwhite   #eeeeec
+
+*color0:  black
+*color1:  red
+*color2:  green
+*color3:  yellow
+*color4:  blue
+*color5:  magenta
+*color6:  cyan
+*color7:  white
+*color8:  brightblack
+*color9:  brightred
+*color10: brightgreen
+*color11: brightyellow
+*color12: brightblue
+*color13: brightmagenta
+*color14: brightcyan
+*color15: brightwhite
