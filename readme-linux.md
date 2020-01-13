@@ -43,12 +43,6 @@ https://github.com/tryone144/compton
 
 Make sure to install all dependencies, specifically make sure to install the mesa version of glx as opposed to the nvidia version of glx. If you don't do this, the tool will show an error where it can't find the glx context.
 
-## Install fonts
-To install fonts, download the font and put it in the `~/.fonts` folder and then run:
-```
-sudo fc-cache -fv
-```
-
 ## Install `redshift`
 Redshift makes the screen tinted yellow for night mode. Install:
 ```

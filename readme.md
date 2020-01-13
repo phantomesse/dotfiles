@@ -69,8 +69,39 @@ To improve the terminal experience, install the following:
 * [vim-plug](https://github.com/junegunn/vim-plug) - plugin manager for vim
   * Install plugins by opening `vim` and running `:PlugInstall`
 
-Aliases such as the `ls` alias that uses `lolcat` and `colorls` are stored in `~/bin`.
-Make sure that they are executable by doing:
+Aliases such as the `ls` alias that uses `lolcat` and `colorls` are stored in
+`~/bin`. Make sure that they are executable by doing:
 ```
 chmod a+x ~/bin/ls
+```
+
+## Fonts
+On my personal Mac, I use
+[Operator Mono](https://www.typography.com/fonts/operator/styles) as my
+monospace font.
+
+On machines that do not have an Operator Mono license, I use
+[Input Mono](https://input.fontbureau.com/) with the customized settings
+ready-to-download from here:
+```
+https://input.fontbureau.com/preview/?size=14&language=css&theme=solarized-dark&family=InputSans&width=300&weight=400&line-height=1.4&a=ss&g=ss&i=serifs_round&l=serifs_round&zero=0&asterisk=height&braces=0&preset=default&customize=please
+```
+
+For my Linux machines, I use San Francisco as the window font (e.g. in the
+toolbar and GUIs). It can be downloaded from here:
+```
+https://github.com/AppleDesignResources/SanFranciscoFont
+```
+
+I also use the [Noto Color Emoji](https://www.google.com/get/noto/help/emoji/)
+font to have colored emojis on my Linux machines. It can be downloaded from
+here:
+```
+https://github.com/googlefonts/noto-emoji
+```
+
+To install fonts on Linux, download the font, put it in the `~/.fonts` folder,
+and then run:
+```
+sudo fc-cache -fv
 ```
