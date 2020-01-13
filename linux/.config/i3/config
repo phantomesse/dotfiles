@@ -134,6 +134,9 @@ exec_always --no-startup-id numlockx on
 bindsym $mod+equal exec amixer set Master 5%+ # increase sound volume
 bindsym $mod+minus exec amixer set Master 5%- # decrease sound volume
 bindsym $mod+Shift+minus exec amixer -D pulse set Master 1+ toggle # mute / unmute sound
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ # increase sound volume
+bindsym XF86AudioLowerVolume exec amixer set Master 5%- # decrease sound volume
+bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle # mute / unmute sound
 
 # Media player controls.
 bindsym XF86AudioPlay exec playerctl play-pause
