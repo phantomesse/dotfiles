@@ -42,7 +42,9 @@ if [[ -n $SSH_CONNECTION ]]; then
 fi
 
 # Need this for switching quickly between insert/normal in vim mode.
-KEYTIMEOUT=10
+KEYTIMEOUT=2
+MODE_CURSOR_VICMD="block"
+MODE_CURSOR_VIINS="underline"
 
 # Case-insensitive auto-complete.
 zstyle ":completion:*" matcher-list "m:{a-zA-Z}={A-Za-z}"
