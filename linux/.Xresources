@@ -1,3 +1,5 @@
+#include ".Xresources.d/colors"
+
 Xft.dpi: 128
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault

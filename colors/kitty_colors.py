@@ -1,4 +1,4 @@
-# Generate colors.conf for kitty config given a map of colors.
+# Generate colors.conf for kitty config.
 
 #!/usr/bin/env python3
 

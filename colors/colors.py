@@ -5,7 +5,8 @@
 
 import os
 import argparse
-import generate_kitty_colors
+import kitty_colors
+import xresources_colors
 
 # Color names, where the index corresponds to their number
 # (e.g yellow = color3).
@@ -33,4 +34,5 @@ for color_group in color_groups:
 
 # Generate config files.
 root_path = '/'.join(os.path.realpath(__file__).split('/')[0:-2])
-generate_kitty_colors.generateFile(root_path, colors, color_names)
+kitty_colors.generateFile(root_path, colors, color_names)
+xresources_colors.generateFile(root_path, colors, color_names)
