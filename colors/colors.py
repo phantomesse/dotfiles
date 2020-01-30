@@ -3,7 +3,9 @@
 
 #!/usr/bin/env python3
 
+import os
 import argparse
+import generate_kitty_colors
 
 # Color names, where the index corresponds to their number
 # (e.g yellow = color3).
@@ -19,10 +21,16 @@ parser.add_argument('file_path',
                     metavar='file_path',
                     help='path to colors markdown file')
 file_path = parser.parse_args().file_path
-file_contents = open(file_path, 'r').read().split('\n')
 
-# Split the file contents by color.
-for i in range(len(file_contents)):
-  line = file_contents[i]
-  if line == '': continue
-  print(line)
+# Get and split the file contents by color.
+file_contents = open(file_path, 'r').read().split('\n\n')
+color_groups = map(lambda group: group.split('\n'), file_contents)
+colors = {}
+for color_group in color_groups:
+  label = color_group[0][2:-2]
+  colors[label] = color_group[1]
+  if (len(color_group) > 2): colors['bright%s' % label] = color_group[2]
+
+# Generate config files.
+root_path = '/'.join(os.path.realpath(__file__).split('/')[0:-2])
+generate_kitty_colors.generateFile(root_path, colors, color_names)
