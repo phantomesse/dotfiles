@@ -75,6 +75,14 @@ Aliases such as the `ls` alias that uses `lolcat` and `colorls` are stored in
 chmod a+x ~/bin/ls
 ```
 
+## Colors
+The `colors.py` script in the colors folder updates the terminal (Kitty) and the
+Xresrouces colors. It also generates an iTerm2 color theme which must be manually imported into iTerm2. Run this script to update the colors:
+
+```
+python3 colors/colors.py colors/solarized.md
+```
+
 ## Fonts
 On my personal Mac, I use
 [Operator Mono](https://www.typography.com/fonts/operator/styles) as my
