@@ -83,6 +83,10 @@ Xresrouces colors. It also generates an iTerm2 color theme which must be manuall
 python3 colors/colors.py colors/solarized.md
 ```
 
+```
+python3 colors/wallpaper_colors.py ~/Desktop/test2.jpeg; python3 colors/colors.py colors/wallpaper.md
+```
+
 ## Fonts
 On my personal Mac, I use
 [Operator Mono](https://www.typography.com/fonts/operator/styles) as my
