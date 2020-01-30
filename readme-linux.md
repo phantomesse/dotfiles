@@ -64,6 +64,14 @@ https://github.com/jaagr/polybar
 http://techmythoughts.blogspot.com/2018/01/installing-i3lock-color-on-ubuntu.html
 ```
 
+## Colors
+The `colors.py` script in the colors folder updates the terminal (Kitty) and the
+Xresrouces colors. Run this script to update the colors:
+
+```
+python colors/colors.py colors/solarized.md
+```
+
 ## Extras
 * Install `numlockx` for numlock control:
   ```
