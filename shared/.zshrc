@@ -104,7 +104,8 @@ export PATH=$HOME/bin:$PATH
 case "$OSTYPE" in
   darwin*) # Mac
     # Use the homebrew in the local path.
-    export PATH=$HOME/homebrew/bin:$PATH
+#    export PATH=$HOME/homebrew/bin:$PATH
+#    export PATH=/usr/local/Homebrew/bin:$PATH
   ;;
   linux*) # Linux
     # Export the NodeJS path.
