@@ -53,9 +53,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # Enter fullscreen mode for the focused container.
-#bindsym $mod+f fullscreen toggle
-# Need to install jq to get this to work: sudo apt-get install jq
-bindsym $mod+f exec bash ~/bin/fullscreen-chrome.sh
+bindsym $mod+f fullscreen toggle
 
 # Change container layout (stacked, tabbed, toggle split).
 bindsym $mod+s layout stacking
