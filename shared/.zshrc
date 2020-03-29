@@ -93,9 +93,11 @@ bindkey -v
 # ALIASES #
 ###########
 
+# Make grep colorful.
+alias grep='grep --color'
+
 # Export path for ~/bin for custom functions.
 export PATH=$HOME/bin:$PATH
-
 
 ###############
 # OS SPECIFIC #
