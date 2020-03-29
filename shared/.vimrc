@@ -40,6 +40,11 @@ set fillchars+=vert:│
 hi StatusLine    ctermfg=DarkMagenta ctermbg=None  cterm=None
 hi StatusLineNC  ctermfg=DarkGray    ctermbg=None  cterm=None
 hi VertSplit     ctermfg=Black       ctermbg=None  cterm=None
+hi Error         ctermfg=None        ctermbg=Red
+hi ErrorMsg      ctermfg=None        ctermbg=Red
+hi SpellRare     ctermfg=None        ctermbg=Red
+hi SpellBad      ctermfg=None        ctermbg=Red
+hi ColorColumn   ctermbg=Black
 
 " Highlight current line.
 set cursorline
