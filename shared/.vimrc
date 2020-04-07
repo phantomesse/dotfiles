@@ -12,6 +12,7 @@ Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'leafgarland/typescript-vim'
+Plug 'ap/vim-css-color'
 call plug#end()
 
 let g:lsc_server_commands = {'dart': 'dart_language_server'}
