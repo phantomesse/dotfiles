@@ -46,6 +46,14 @@ hi ErrorMsg      ctermfg=None        ctermbg=Red
 hi SpellRare     ctermfg=None        ctermbg=Red
 hi SpellBad      ctermfg=None        ctermbg=Red
 hi ColorColumn   ctermbg=Black
+hi Constant      ctermfg=Yellow
+hi Statement     ctermfg=Blue
+hi Comment       ctermfg=Gray
+
+" Press F10 to show which syntax highlight group is used at the cursor
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 " Highlight current line.
 set cursorline
@@ -90,4 +98,3 @@ nmap <C-c> :.w! ~/.vimbuffer<CR>
 
 " Paste from buffer.
 map <C-p> :r ~/.vimbuffer<CR>
-
