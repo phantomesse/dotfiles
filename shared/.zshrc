@@ -13,7 +13,7 @@ source ~/.zplug/init.zsh
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "softmoth/zsh-vim-mode"
 zplug "denysdovhan/spaceship-prompt"
-zplug "zdharma/history-search-multi-word" # Ctrl + r
+zplug "zdharma-continuum/history-search-multi-word" # Ctrl + r
 
 # Install packages that have not been installed yet.
 if ! zplug check --verbose; then
