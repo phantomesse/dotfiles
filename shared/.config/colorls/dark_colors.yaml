@@ -1,6 +1,7 @@
 # Main Colors
 unrecognized_file: yellow
 recognized_file:   white
+executable_file:   magenta
 dir:               blue
 
 # Link
