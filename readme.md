@@ -1,7 +1,7 @@
 # Lauren's dotfiles setup
 This repository contains my personal dotfiles for both MacOS and Linux. Further
-documentation on [MacOS-specific setup](readme-macos.md) and
-[Linux-specific](readme-linux.md) setup is available in linked files.
+documentation on [Linux-specific](readme-linux.md) setup is available in linked
+files.
 
 ## 1️⃣ Clone this GitHub repo
 
@@ -37,11 +37,6 @@ For both MacOS and Linux, install the shared dotfiles:
 stow shared
 ```
 
-For MacOS-specific dotfiles:
-```
-stow macos
-```
-
 For Linux-specific dotfiles:
 ```
 stow linux
@@ -57,8 +52,6 @@ To improve the terminal experience, install the following:
 
 * [tmux](https://github.com/tmux/tmux) - a terminal multiplexer that allows
   split screens and multiple panes within the terminal
-* [lolcat](https://github.com/busyloop/lolcat) - I use this to print `ls` in
-  rainbow colors
 * [colorls](https://github.com/athityakumar/colorls) - adds icons to `ls`
   * To get the icons to show up, make sure that a font from
     [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) is installed
