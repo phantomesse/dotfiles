@@ -1,0 +1,55 @@
+[window]
+dynamic_padding = true
+decorations = "buttonless"
+opacity = 0.95
+blur = true
+
+  [window.padding]
+  x = 20
+  y = 20
+
+[font]
+size = 16
+
+  [font.normal]
+  family = "OperatorMono Nerd Font"
+  
+  [font.offset]
+  x = 1
+  y = 4
+
+[colors.primary]
+background = "#261f17"
+foreground = "#dfd7ca"
+
+[colors.selection]
+text = "CellBackground"
+background = "CellForeground"
+
+[colors.normal]
+black = "#3b2409"
+red = "#8d2b03"
+green = "#a2883f"
+yellow = "#ed861a"
+blue = "#9e9b86"
+magenta = "#cb7550"
+cyan = "#938653"
+white = "#a59279"
+
+[colors.bright]
+black = "#a17b54"
+red = "#c35726"
+green = "#d0a34d"
+yellow = "#e7be77"
+blue = "#9e9b86"
+magenta = "#ec803e"
+cyan = "#c4a46b"
+white = "#e9e5da"
+
+[selection]
+save_to_clipboard = true
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Command"
+action = "ToggleFullscreen"

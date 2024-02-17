@@ -108,6 +108,9 @@ case "$OSTYPE" in
     # Use the homebrew in the local path.
 #    export PATH=$HOME/homebrew/bin:$PATH
 #    export PATH=/usr/local/Homebrew/bin:$PATH
+    export PATH="$PATH:$HOME/.flutter/bin"
+
+
   ;;
   linux*) # Linux
     # Export the NodeJS path.
