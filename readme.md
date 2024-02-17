@@ -98,3 +98,6 @@ and then run:
 ```
 sudo fc-cache -fv
 ```
+
+## Install Alacritty on windows
+https://technixleo.com/install-and-configure-alacritty-terminal-on-windows/
